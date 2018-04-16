@@ -1,8 +1,21 @@
+/**
+ * 只能有一个public修饰的类
+ * 类名首字母要大写
+ * 类名必须与文件名一样
+ */
 public class Hello {
-  // main 是java程序的主入口，jvm外部体用public
-  // static 修饰的方法可以通过类名直接调用
-  public static void main(String[] arg) {
+  /**
+   * main 是java程序的主入口，jvm外部体用public
+   * static 修饰的方法可以通过类名直接调用
+   */
+  public static void main(String[] args) {
+    System.out.println("Hello Word");
+  }
+}
 
+class ABC {
+  public static void main(String[] args) {
+    System.out.println("ABC");
   }
 }
 
@@ -10,6 +23,41 @@ public class Hello {
 
 在终端执行javac->在path路径找到javac.exe来执行 java.Hello程序
 
-jkd(Java Development Kit)
+jkd(Java Development Kit):java工具包
+
 
 Mac下查看已安装的jdk版本及其安装目录->/usr/libexec/java_home -V
+
+在window终端 echo %path%
+C:\ProgramData\Oracle\Java\javapath;
+C:\Windows\system32;C:\Windows;
+C:\Windows\System32\Wbem;
+C:\Windows\System32\WindowsPowerShell\v1.0\;
+C:\Program Files\Git\cmd;
+C:\Program Files\Git\mingw64\bin;
+C:\Program Files\Git\usr\bin;D:\nodejs\;
+C:\Program Files\TortoiseSVN\bin;
+E:\composer;D:\wamp\bin\php\php7.0.10;
+C:\Program Files\Java\jdk-9.0.1\bin;
+C:\Program Files\Java\jdk-9.0.1\jre\bin;;
+C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;
+C:\Users\Administrator\AppData\Roaming\npm;
+E:\Microsoft VS Code\bin;
+C:\Users\Administrator\AppData\Roaming\Composer\vendor\bin
+
+环境配置流程
+1、下载jdk
+2、安装jkd
+3、配置环境变量
+  a)JAVA_HOME 配置jdk安装路径
+    C:\Program Files\Java\jdk-9.0.1
+    C:\Program Files\Java\jdk-9.0.1\jre\bin;
+  b)PATH 配置jdk命令文件的位置（javac.exe java.exe）
+    C:\Program Files\Java\jdk-9.0.1\bin;
+  c)CLASSPATH 配置类文件的位置（lib）为类的路径,是java运行时查找类文件的路径（.class）。(D:\code\java-;)就是配置这个就不用到当前文件夹下执行命令，可以在终端任意位置执行java命令。
+    .;C:\Program Files\Java\jdk-9.0.1\lib\dt.jar;C:\Program Files\Java\jdk-9.0.1\lib\tools.jar;D:\code\java-;
+    
+
+编译流程
+运行javac ->把.java文件变成.class文件 -> 运行java -> 执行.class文件不用带.class后缀
+
