@@ -1,6 +1,6 @@
-JDK: java development kit, java开发工具包，针对开发者，里面主要包含了jre, jvm, jdk源码包，以及bin文件夹下用于开发，编译运行的一些指令器。
+JRE(Java Runtime Enviroment)是Java的运行环境。面向Java程序的使用者，而不是开发者。如果你仅下载并安装了JRE，那么你的系统只能运行Java程序。JRE是运行Java程序所必须环境的集合，包含JVM标准实现及 Java核心类库。它包括Java虚拟机、Java平台核心类和支持文件。它不包含开发工具(编译器、调试器等)。
 
-JRE: java runtime environment, java运行时环境，针对java用户，也就是拥有可运行的.class文件包（jar或者war）的用户。里面主要包含了jvm和java运行时基本类库（rt.jar）。rt.jar可以简单粗暴地理解为：它就是java源码编译成的jar包（解压出来看一下），用eclipse开发时，当你ctrl点击发现不能跳转到源文件时，需要把rt.jar对应的源码包加进来，而这里的源码包正是jdk文件夹下的src.zip。如下图：
+JDK(Java Development Kit)又称J2SDK(Java2 Software Development Kit)，是Java开发工具包，它提供了Java的开发环境(提供了编译器javac等工具，用于将java文件编译为class文件)和运行环境(提 供了JVM和Runtime辅助包，用于解析class文件使其得到运行)。如果你下载并安装了JDK，那么你不仅可以开发Java程序，也同时拥有了运行Java程序的平台。JDK是整个Java的核心，包括了Java运行环境(JRE)，一堆Java工具tools.jar和Java标准类库 (rt.jar)。
 
 JVM: java虚拟机，将它理解为可以识别class文件的一个小型系统，class文件直接和它交互，所以它让class文件和用户真实的操作系统隔离，屏蔽了用户系统的差异性，给人一种感觉就是java出道的最大特点：一次编译，处处运行（跨平台）。而这也正是java跨平台引起过争议的一点，曾经一些人觉得java跨平台是个幌子，因为前提是用户机子上必须安装了JVM（准确地说是JRE）。
 
