@@ -61,3 +61,24 @@ C:\Users\Administrator\AppData\Roaming\Composer\vendor\bin
 编译流程
 运行javac ->把.java文件变成.class文件 -> 运行java -> 执行.class文件不用带.class后缀
 
+设置JAVA_HOME:
+
+一是为了方便引用，比如，JDK安装在C:\jdk1.6.0目录里，则设置JAVA_HOME为该目录路径, 那么以后要使用这个路径的时候, 只需输入%JAVA_HOME%即可, 避免每次引用都输入很长的路径串;
+
+二则是归一原则, 当JDK路径改变的时候, 仅需更改JAVA_HOME的变量值即可, 否则,就要更改任何用绝对路径引用JDK目录的文档, 要是万一没有改全, 某个程序找不到JDK, 后果是可想而知的----系统崩溃!
+
+三则是第三方软件会引用约定好的 JAVA_HOME 变量, 不然, 你不能正常使用该软件。
+
+在系统环境变量那一栏中点 -> 新建 JAVA_HOME （JAVA_HOME指向的是JDK的安装路径）
+
+path 变量
+
+path 变量使得我们能够在系统中的任何地方运行java应用程序，比如 javac、java、javah 等等,这就要找到我们安装 JDK 的目录，
+
+假设我们的JDK安装在 C:\jdk1.6.0 目录下,那么在 C:\jdk1.6.0\bin 目录下就是我们常用的 java 应用程序,我们就需要把 C:\jdk1.6.0\bin 这个目录加到 path 环境变量里面。
+
+classpath 变量
+
+classpath 环境变量，是当我们在开发java程序时需要引用别人写好的类时，要让 java 解释器知道到哪里去找这个类。通常，sun 为我们提供了一些额外的丰富的类包，一个是 dt.jar，一个是 tools.jar，这两个 jar 包都位于 C:\jdk1.6.0\lib 目录下，所以通常我们都会把这两个 jar 包加到我们的 classpath 环境变量中 set classpath=.;C:\jdk1.6.0\lib\tools.jar;C:\jdk1.6.0\lib\dt.jar。
+
+注意在完成配置环境变量后测试JDK是否安装成功时键入命令：java -version
